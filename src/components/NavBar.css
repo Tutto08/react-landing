@@ -1,0 +1,29 @@
+#navBarContainer{
+    background-color: #000000;
+    padding: 0.5em 0.3em;
+}
+.nav-link{
+    color: #f4c966a3 !important
+}
+.nav-link.active{
+    color: #f4ca66 !important;
+}
+.nav-link.disabled{
+    color: rgb(255 255 255 / 31%) !important;
+}
+.dropdown-item {
+    color: #f4ca66;
+    font: 500 18px / 22px "Open Sans", sans-serif;
+}
+.dropdown-item:hover{
+    background-color: #f4ca66;
+    color: #000000;
+}
+.dropdown-menu{
+    background-color: #000000;
+    border: 2px solid #e2ad38;
+    border-radius: 8px;
+}
+.navbar-toggler:hover{
+    border-color: #f4ca66;
+}
