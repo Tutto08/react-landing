@@ -27,6 +27,7 @@ function NavBar(){
                             <li><a className="dropdown-item" href="#">Banpresto</a></li>
                             <li><a className="dropdown-item" href="#">Nendoroid</a></li>
                             <li><a className="dropdown-item" href="#">Funko</a></li>
+                            <li><a className="dropdown-item" href="#">Bandai</a></li>
                         </ul>
                         </li>
                         <li className="nav-item">
