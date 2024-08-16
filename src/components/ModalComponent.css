@@ -1,0 +1,46 @@
+/* ModalComponent.css */
+.modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+}
+
+.modal-content {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #f4ca66;
+    border-bottom: 1px solid #f4ca66;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.close {
+    font-size: 1.5rem;
+    color: #000;
+    opacity: 0.5;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+}
+
+.modal-footer .btn-primary {
+    background-color: #f4ca66;
+}
+
+.modal.fade.d-block {
+    opacity: 1;
+}
+
+.d-none {
+    display: none;
+}

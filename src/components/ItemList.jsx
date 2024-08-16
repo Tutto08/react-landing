@@ -1,6 +1,6 @@
 import React  from "react";
 import Item from "./Item";
-const ItemList = ({productos}) => {
+const ItemList = ({productos, agregarAlCarrito}) => {
     return(
         productos.map((el, index) => {
             return (

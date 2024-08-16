@@ -53,9 +53,7 @@ function NavBar(){
                         </li>
                     </ul>
                     <ul className="navbar-nav mb-2 mb-lg-0 ms-lg-auto">
-                        <li className="nav-item">
-                        <CartWidget />
-                        </li>
+                        <CartWidget/>
                     </ul>
                 </div>
             </div>

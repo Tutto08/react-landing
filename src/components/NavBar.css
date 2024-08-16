@@ -27,3 +27,6 @@
 .navbar-toggler:hover{
     border-color: #f4ca66;
 }
+.carrito{
+    cursor: pointer;
+}

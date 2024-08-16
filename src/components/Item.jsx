@@ -23,7 +23,7 @@ const Item = ({index, nombre, precio, imagen, estado, marca}) => {
                     </div>
                     <div className="col-12 my-3 d-flex justify-content-center">
                         <Link to={`/detalle/${index}`}>                        
-                            <button className="btn-card">Agregar al carrito</button>
+                            <button className="btn-card">Ver Detalle</button>
                         </Link>
                     </div>
                 </div>

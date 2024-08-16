@@ -1,7 +1,9 @@
 import React, { useEffect, useState }  from "react";
 import { useParams } from "react-router-dom";
-const ItemDetail = ({productos}) => {
+import { useAppContext } from "./Context";
+const ItemDetail = ({}) => {
 
+    const {productos, agregarAlCarrito}  = useAppContext();
     const {id} = useParams();    
 
     const [productoSeleccionado, setProductoSeleccionado] = useState({})
@@ -34,7 +36,7 @@ const ItemDetail = ({productos}) => {
                             <p className="card-price text-orange">Precio: <span className="text-black">{productoSeleccionado.precio}</span></p>
                         </div>
                         <div className="col-12 my-3 d-flex justify-content-start">
-                            <button className="btn-card">Agregar al carrito</button>
+                            <button className="btn-card" onClick={() => agregarAlCarrito(productoSeleccionado.id)}>Agregar al carrito</button>
                         </div>
                     </div>
                 </div>

@@ -10,12 +10,13 @@ import fetchData from './fetchData.js'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NotFound from './components/NotFound.jsx'
 import ItemDetail from './components/ItemDetail.jsx'
+import { ContextProvider } from './components/Context.jsx'
 
 function App() {
   
-  const [productos, setProductos] = useState([]);
+  
   useEffect(() => {
-    fetchData().then( response => {console.log(response); setProductos(response)});
+    
 
     /*fetch('https://restcountries.com/v3.1/name/Argentina') // Para GET ponemos FETCH y url
     .then(response => response.json()) //fetch es asincrono asi que devuelve una promesa, por eso usamos fetch
@@ -30,18 +31,20 @@ function App() {
       // .json le da formato pero devuelve otra promesa, pones "data" o lo que quieras y lo traes
   })
 
-
   return (
     <>
-      <BrowserRouter basename='/react-landing'>      
-        <NavBar />   
-        <Routes>
-        <Route path="/" element={<ItemListContainer  productos = {productos} mensajeBienvenida={'Bienvenido a'} mensajeContenido='Cargando ...'/>} />
-          <Route path="/:filtro" element={<ItemListContainer  productos = {productos} mensajeBienvenida={'Bienvenido a'} mensajeContenido='Cargando ...'/>} />
-          <Route path="/detalle/:id" element={<ItemDetail productos = {productos}/>} />
-          <Route path="*" element={<NotFound/>} />
-        </Routes>        
-      </BrowserRouter>      
+    
+      <ContextProvider> 
+        <BrowserRouter basename='/react-landing'>   
+            <NavBar />   
+            <Routes>
+            <Route path="/" element={<ItemListContainer/>} />
+              <Route path="/:filtro" element={<ItemListContainer/>} />
+              <Route path="/detalle/:id" element={<ItemDetail/>} />
+              <Route path="*" element={<NotFound/>} />
+            </Routes>        
+        </BrowserRouter>      
+      </ContextProvider>     
       
     </>
   )
